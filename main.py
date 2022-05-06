@@ -17,4 +17,4 @@ def quiz():
   print("What is the maori word for 'toilet' ")
   print("A: Whare")
   print("B: ")
-  
+  print("Yeet")

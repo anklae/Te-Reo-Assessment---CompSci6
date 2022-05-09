@@ -1,7 +1,24 @@
 import time
-time.sleep(.5)
+#functions go here
+score = 0
+def quiz():
+  print("What is the maori word for 'toilet' ")
+  print("A: Whare")
+  print("B: Karekau  ")
+  print("C: Wharepaku")
+  print("D: Taonga")
+  question1 = input().lower
+  if question1 == "c":
+    print("Correct!")
+    score + 1
+  else:
+    print("Incorrect")
+      
 
-response = input("Hello, Welcome to the Te Reo Quiz, Would you like to proceed? ").lower()
+
+print("Welcome to the test")
+print("This test has 15 questions")
+response = input(" Would you like to proceed? ").lower()
 
 if response == "yes" or response == "y":
     print("Great! Lets get started!")
@@ -12,9 +29,6 @@ else:
   print("Please answer Yes or no")
 
   
-  
-def quiz():
-  print("What is the maori word for 'toilet' ")
-  print("A: Whare")
-  print("B: ")
-  print("Yeet")
+
+
+

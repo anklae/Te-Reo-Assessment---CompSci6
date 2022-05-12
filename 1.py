@@ -12,51 +12,43 @@ def statement_generator(statement, decoration):
     
     return ""
 def respo():
-  valid = False
-  while not valid:
-    response = input("Would you like to proceed ").lower()
-    
-    if response == "yes" or response  == "y":
-      response == "yes"
+  response = input("Would you like to proceed? ").lower()
+  if response == "yes" or response == "y":
+      print("Great! Lets get started!")
       question_hab()
-    elif response == "no" or response == "n":
-      response = "no"
-      return response
-    
- 
-    else:
-      print("Please answer Yes/No")
+  elif response == "no" or response == "n":
+      print("Goodbye")
+  else:  
+    print("Please answer Yes or no")
+    respo()
 
 def question_hab():
   score = 0
-  
-  question1 = input("Question 1: What is the Te Reo word for Hello: A: Wharepaku B: Karekau C: Kia ora D: Takaro ").lower()
+  question1 = input("What is the Te Reo word for Hello: A: Wharepaku B: Karekau C: Kia ora D: Takaro ").lower()
   if question1 == "c" or question1 == "kia ora":
     score += 1 
     print("Correct!")
-    
   else:
     print("Incorrect, The answer is Kia Ora ")
   
-  question2 = input("Question 2: What is the Te Reo word for food: A: Tukituki B: Kai C: Aporo D: Hanawiti ").lower()
+  question2 = input("What is the Te Reo word for food: A: Tukituki B: Kai C: Aporo D: Hanawiti ").lower()
   if question2 == "b" or question2 == "kai":
     score += 1 
     print("Correct!")
   else: 
     print("Incorrect, The Answer is Kai") 
   
-  question3 = input("Question 3: What is the Te Reo word for Sea Food A:Kai Moana B: aporo C:tepu D:taraka").lower()
-  if question3 == "a" or question3 == "kai moana":
+  question3 = input("What is the Te Reo word for Sea Food").lower()
+  if question3 == "" or question3 == "":
     score += 1 
     print("Correct!")
   else: 
-    print("Incorrect, The answer is kai moana ") 
+    print("Incorrect, ") 
   
   
-  question4 = input("Question 4:What is the Te Reo word for Breakfast A:watea B:punetēpu C:taurewa D:").lower()
-  if question4 == "D" or question4 == "Breakfast":
-    score += 1
-    
+  question4 = input("What is the Te Reo word for").lower()
+  if question4 == "" or question4 == "":
+    score += 1 
     print("Correct!")
   else: 
     print("Incorrect, The Answer is ") 
@@ -67,9 +59,6 @@ def question_hab():
     print("Correct!")
   else: 
     print("Incorrect, The Answer is ") 
-
-
-    
 
 #Greet the user and ask them if they would like to partake in the quiz
 statement_generator("Welcome to the Te Reo Maori test!", "*")

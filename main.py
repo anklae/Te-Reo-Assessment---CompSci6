@@ -23,6 +23,7 @@ def respo():
       question_hab()
     elif response == "no" or response == "n":
       response = "no"
+      print("Have a good day")
       return response
     
  
@@ -135,7 +136,7 @@ def question_hab():
     
   print("Q11: What is the Te Reo word for Toilet: A: oro B:karekau C:kāore he aha D:wharepaku")
   question11 = input().lower()
-  if question11 == "D" or question11 == "wharepaku":
+  if question11 == "d" or question11 == "wharepaku":
     score += 1 
     print("Correct!")
     print()
@@ -143,49 +144,49 @@ def question_hab():
     print("Incorrect, The Answer is Wharepaku  ") 
     print()
 
-    print("Q12: What is the Te Reo word for : ")
+    print("Q12: What is the Te Reo word for Mountain: A:awhe B:maunga C:puke D:pepi ")
   question12 = input().lower()
-  if question12 == "" or question12 == "":
+  if question12 == "b" or question12 == "maunga":
     score += 1 
     print("Correct!")
     print()
   else: 
-    print("Incorrect, The Answer is ") 
+    print("Incorrect, The Answer is Maunga") 
     print()
   
-  print("Q13: What is the Te Reo word for ")
+  print("Q13: What is the Te Reo word for River: A:moana B:rakau C: D:awa ")
   question13 = input().lower()
-  if question13 == "" or question13 == "":
+  if question13 == "d" or question13 == "awa":
     score += 1 
     print("Correct!")
     print()
   else: 
-    print("Incorrect, The Answer is ") 
+    print("Incorrect, The Answer is Awa ") 
     print()
 
-  print("Q14: What is the Te Reo word for ")
+  print("Q14: What is the Te Reo word for Car: A:whakaora oros B:uma C:whaaa ah D:waka")
   question14 = input().lower()
-  if question14 == "" or question14 == "":
+  if question14 == "D " or question14 == "waka":
     score += 1 
     print("Correct!")
     print()
   else: 
-    print("Incorrect, The Answer is ") 
+    print("Incorrect, The Answer is Waka") 
     print()
 
-  print("Q15: What is the Te Reo word for ")
+  print("Q15: What is the Te Reo word for purity: A:karekau B:mā C:parakore D: ma ")
   question15 = input().lower()
-  if question15 == "" or question15 == "":
+  if question15 == "B" or question15 == "":
     score += 1 
     print("Correct!")
     print()
   else: 
-    print("Incorrect, The Answer is ") 
+    print("Incorrect, The Answer is  mā") 
     print()
   
   
     #Greet the user and ask them if they would like to partake in the quiz
-statement_generator("Welcome to the Te Reo Maori test!", "*")
+statement_generator("Welcome to the Te Reo Maori test!", "%")
 print()
 print("This test has 15 multiple choice questions")
 respo()

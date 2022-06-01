@@ -15,6 +15,7 @@ statement_generator("Welcome to the Te Reo Maori test!", "%")
 print()
 print("This test has 15 multiple choice questions")
 #This function asks the user if they would like to proceed
+score = 0
 def respo():
   response = input("Would you like to proceed ").lower()
   print()
@@ -31,9 +32,98 @@ def respo():
 
 
 
+
 def bonus_questions():
-  print("YOUR KNOWLEDGE OF THE TE REO MAORI ")
+  
+  print("These bonus questions will give you 2x more points then the usual questions, Make sure to try your best")
+  print()
+  print("Bonus Question 1:  What is the te reo word for bread: A:taro B:kongakonga taro c:takakau D:")
+  bonus_question = input().lower()
+  if bonus_question == "a" or bonus_question == "taro":
+    score += 2
+    print("Correct!")
+    print()
+  else:
+    print("Incorrect, The answer is ")
+    print()
+
+  print("Bonus Question 2:")
+  bonus_question2 = input().lower()
+  if bonus_question2 == "c" or bonus_question2 == "":
+    score += 2
+    print("Correct!")
+    print()
+  else:
+    print("Incorrect, The answer is ")
+    print()
+  
+  print("Bonus Question 3:")
+  bonus_question3 = input().lower()
+  if bonus_question3 == "" or bonus_question3 == "":
+    score += 2
+    print("Correct!")
+    print()
+  else:
+    print("Incorrect, The answer is ")
+    print()
+
+  print("Bonus Question 4:")
+  bonus_question4 = input().lower()
+  if bonus_question4 == "" or bonus_question4 == "":
+    score += 2
+    print("Correct!")
+    print()
+  else:
+    print("Incorrect, The answer is ")
+    print()
+
+    print("Bonus Question 5:")
+  bonus_question5 = input().lower()
+  if bonus_question5 == "" or bonus_question5 == "":
+    score += 2
+    print("Correct!")
+    print()
+  else:
+    print("Incorrect, The answer is ")
+    print()
+  
+  print("Bonus Question 6:")
+  bonus_question6 = input().lower()
+  if bonus_question6 == "" or bonus_question6 == "":
+    score += 2
+    print("Correct!")
+    print()
+  else:
+    print("Incorrect, The answer is ")
+    print()
+
+  print("Bonus Question 7:")
+  bonus_question7 = input().lower()
+  if bonus_question7 == "" or bonus_question7 == "":
+    score += 2
+    print("Correct!")
+    print()
+    end()
+  else:
+    print("Incorrect, The answer is ")
+    print()
+    end()
+    
+
+
+
 #This Function starts the quiz and shows the questions when called apon
+
+def end():
+  if score <= 5:
+    print("you did not do very well, you could do way better")
+  if score <= 10: 
+    print("You did alright, well done")
+  if score <= 15:
+    print("Good job , you answered more than half of the questions  ")
+  if score <= 20:
+    print("Great job,")
+
 def question_hab():
   score = 0
   print("Q1: What is the Te Reo word for Hello?: A:wharepaku B:karekau C:kia ora D:takaro")
@@ -46,7 +136,6 @@ def question_hab():
     print("Incorrect, The answer is Kia Ora ")
     print()
 
-  
   print("Q2: What is the Te Reo word for Food?: A:tukituki B:kai C:Aporo D:hanawiti ")
   question2 = input().lower()
   if question2 == "b" or question2 == "kai":
@@ -190,6 +279,8 @@ def question_hab():
   if score >= 10:
     print("You have done great, you have answered {}/15 questions!, here are some bonus questions for having such a wrinkly brain ".format(score))
     bonus_questions()
+  elif score <= 10:
+    end()
 
 resp_call = respo()
 

@@ -1,8 +1,6 @@
 #Functions go here
-
 #This function adds a border to a selected statement to give it more style and "pazaz"
 def statement_generator(statement, decoration):
-
     sides = decoration * 3
   
     statement = "{} {} {}".format(sides, statement, sides)
@@ -13,23 +11,29 @@ def statement_generator(statement, decoration):
     print(top_bottom)
     
     return ""
+statement_generator("Welcome to the Te Reo Maori test!", "%")
+print()
+print("This test has 15 multiple choice questions")
+#This function asks the user if they would like to proceed
 def respo():
-  valid = False
-  while not valid:
-    response = input("Would you like to proceed ").lower()
-    
-    if response == "yes" or response  == "y":
-      response == "yes"
-      question_hab()
-    elif response == "no" or response == "n":
-      response = "no"
-      print("Have a good day")
-      return response
-    
- 
-    else:
-      print("Please answer Yes/No")
+  response = input("Would you like to proceed ").lower()
+  print()
+  if response == "yes" or response  == "y":
+    response == "yes"
+    question_hab()
+  elif response == "no" or response == "n":
+    response = "no"
+    print("Have a good day")
+  else:
+    print("Please answer Yes/No")
+    print()
+    respo()
 
+
+
+def bonus_questions():
+  print("YOUR KNOWLEDGE OF THE TE REO MAORI ")
+#This Function starts the quiz and shows the questions when called apon
 def question_hab():
   score = 0
   print("Q1: What is the Te Reo word for Hello?: A:wharepaku B:karekau C:kia ora D:takaro")
@@ -144,7 +148,7 @@ def question_hab():
     print("Incorrect, The Answer is Wharepaku  ") 
     print()
 
-    print("Q12: What is the Te Reo word for Mountain: A:awhe B:maunga C:puke D:pepi ")
+  print("Q12: What is the Te Reo word for Mountain: A:awhe B:maunga C:puke D:pepi ")
   question12 = input().lower()
   if question12 == "b" or question12 == "maunga":
     score += 1 
@@ -166,7 +170,7 @@ def question_hab():
 
   print("Q14: What is the Te Reo word for Car: A:whakaora oros B:uma C:whaaa ah D:waka")
   question14 = input().lower()
-  if question14 == "D " or question14 == "waka":
+  if question14 == "d" or question14 == "waka":
     score += 1 
     print("Correct!")
     print()
@@ -176,24 +180,18 @@ def question_hab():
 
   print("Q15: What is the Te Reo word for purity: A:karekau B:mā C:parakore D: ma ")
   question15 = input().lower()
-  if question15 == "B" or question15 == "":
+  if question15 == "b" or question15 == "mā":
     score += 1 
     print("Correct!")
     print()
   else: 
     print("Incorrect, The Answer is  mā") 
     print()
-  
-  
-    #Greet the user and ask them if they would like to partake in the quiz
-statement_generator("Welcome to the Te Reo Maori test!", "%")
-print()
-print("This test has 15 multiple choice questions")
-respo()
+  if score >= 10:
+    print("You have done great, you have answered {}/15 questions!, here are some bonus questions for having such a wrinkly brain ".format(score))
+    bonus_questions()
 
+resp_call = respo()
 
-
-
-print()
 #QUESTIONS GO HERE!
 

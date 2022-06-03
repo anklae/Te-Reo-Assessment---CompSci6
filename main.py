@@ -34,42 +34,41 @@ def respo():
 
 
 def bonus_questions():
-  
   print("These bonus questions will give you 2x more points then the usual questions, Make sure to try your best")
   print()
-  print("Bonus Question 1:  What is the te reo word for bread: A:taro B:kongakonga taro c:takakau D:")
+  print("Bonus #Q1:What is the te reo word for bread: A:taro B:kongakonga taro c:takakau D:Te petipeti")
   bonus_question = input().lower()
   if bonus_question == "a" or bonus_question == "taro":
     score += 2
     print("Correct!")
     print()
   else:
-    print("Incorrect, The answer is ")
+    print("Incorrect, The answer is taro")
     print()
 
-  print("Bonus Question 2:")
+  print("Bonus #Q2: What is the maori word for Hatchet? A:rangatira B:toki C:paotahi D: patu")
   bonus_question2 = input().lower()
-  if bonus_question2 == "c" or bonus_question2 == "":
+  if bonus_question2 == "c" or bonus_question2 == "paotahi":
     score += 2
     print("Correct!")
     print()
   else:
-    print("Incorrect, The answer is ")
+    print("Incorrect, The answer is paotahi")
     print()
   
-  print("Bonus Question 3:")
+  print("Bonus  #Q3: what is the Te reo word for porcupine: A:porcupine B:poaka C:rotarota D:goorg ")
   bonus_question3 = input().lower()
-  if bonus_question3 == "" or bonus_question3 == "":
+  if bonus_question3 == "a" or bonus_question3 == "porcupine":
     score += 2
     print("Correct!")
     print()
   else:
-    print("Incorrect, The answer is ")
+    print("Incorrect, The answer is porcupine")
     print()
 
-  print("Bonus Question 4:")
+  print("Bonus #Q4: What is the te reo word for plane: A: B: C: D:rererangi ")
   bonus_question4 = input().lower()
-  if bonus_question4 == "" or bonus_question4 == "":
+  if bonus_question4 == "d" or bonus_question4 == "rererangi":
     score += 2
     print("Correct!")
     print()
@@ -77,7 +76,7 @@ def bonus_questions():
     print("Incorrect, The answer is ")
     print()
 
-    print("Bonus Question 5:")
+    print("Bonus #Q5:")
   bonus_question5 = input().lower()
   if bonus_question5 == "" or bonus_question5 == "":
     score += 2
@@ -87,7 +86,7 @@ def bonus_questions():
     print("Incorrect, The answer is ")
     print()
   
-  print("Bonus Question 6:")
+  print("Bonus Question #Q6:")
   bonus_question6 = input().lower()
   if bonus_question6 == "" or bonus_question6 == "":
     score += 2
@@ -97,7 +96,7 @@ def bonus_questions():
     print("Incorrect, The answer is ")
     print()
 
-  print("Bonus Question 7:")
+  print("Bonus Question #Q7:")
   bonus_question7 = input().lower()
   if bonus_question7 == "" or bonus_question7 == "":
     score += 2
@@ -117,13 +116,14 @@ def bonus_questions():
 def end():
   if score <= 5:
     print("you did not do very well, you could do way better")
-  if score <= 10: 
+  if score >=5 and score <= 10 : 
     print("You did alright, well done")
-  if score <= 15:
+  if score >= 10 and score <= 15:
     print("Good job , you answered more than half of the questions  ")
-  if score <= 20:
+  if score >= 15 and score <= 20:
     print("Great job,")
-
+  if score >= 25:
+    print()
 def question_hab():
   score = 0
   print("Q1: What is the Te Reo word for Hello?: A:wharepaku B:karekau C:kia ora D:takaro")
@@ -257,14 +257,14 @@ def question_hab():
     print("Incorrect, The Answer is Awa ") 
     print()
 
-  print("Q14: What is the Te Reo word for Car: A:whakaora oros B:uma C:whaaa ah D:waka")
+  print("Q14: What is the Te Reo word for Car: A:whakaora oros B:uma C:whaaa ah D:motoka")
   question14 = input().lower()
-  if question14 == "d" or question14 == "waka":
+  if question14 == "d" or question14 == "motoka":
     score += 1 
     print("Correct!")
     print()
   else: 
-    print("Incorrect, The Answer is Waka") 
+    print("Incorrect, The Answer is motoka") 
     print()
 
   print("Q15: What is the Te Reo word for purity: A:karekau B:mā C:parakore D: ma ")

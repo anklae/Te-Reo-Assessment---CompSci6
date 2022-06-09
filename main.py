@@ -1,5 +1,8 @@
+import os
+import time
+
 #Functions go here
-#This function adds a border to a selected statement to give it more style and "pazaz"
+#This function adds a border to a selected statement to give it more style and "pazaz" 
 def statement_generator(statement, decoration):
     sides = decoration * 3
   
@@ -22,6 +25,7 @@ def respo():
   if response == "yes" or response  == "y":
     response == "yes"
     question_hab()
+    os.system('clear')
   elif response == "no" or response == "n":
     response = "no"
     print("Have a good day")
@@ -30,24 +34,25 @@ def respo():
     print()
     respo()
 
-
-
-
 #This Function starts the quiz and shows the questions when called apon
 
 def end():
-  statement_generator("You got a score of {} out 29 points".format(score), "=")
+  global score
+  statement_generator("You got a score of {} out 29 points".format(score), "*")
   if score <= 5:
     print("you did not do very well, you could do way better")
-  if score >=5 and score <= 10 : 
+  elif score >=5 and score <= 10: 
     print("You did alright, well done")
   if score >= 10 and score <= 15:
     print("Good job , you answered more than half of the questions  ")
   if score >= 15 and score <= 20:
     print("Great job,")
   if score >= 25:
-    print()
+    print("You did amazing!!!!")
+  if score >= 29:
+    print("how have you done this")
 def question_hab():
+  global score
   score = 0
   print("Q1: What is the Te Reo word for Hello?: A:wharepaku B:karekau C:kia ora D:takaro")
   question1 = input().lower()
@@ -95,9 +100,8 @@ def question_hab():
     score += 1 
     print("Correct!")
     print()
-  
   else: 
-    print("Incorrect, The Answer is tina ") 
+    print("Incorrect, The Answer is tina ")
     print()
 
   print("Q6: What is the Te Reo word for Mom: A:mama B: karaihe C:petipeti D: hautoa ") 
@@ -204,10 +208,12 @@ def question_hab():
     print()
     print("You have done great, you have answered {}/15 questions!, here are a few bonus questions for having such a wrinkly brain".format(score))
     print()
+    time.sleep(4)
+    os.system('clear')
+    time.sleep(0.5)
     bonus_questions()
   elif score <= 10:
     end()
-
 
 
 def bonus_questions():
@@ -254,7 +260,7 @@ def bonus_questions():
     print("Incorrect, The answer is rererangi ")
     print()
 
-    print("Bonus #Q5: What is the te reo word for wing? A:tuna B:hau C:parirau D:Kararehe pakau")
+  print("Bonus #Q5: What is the te reo word for wing? A:tuna B:hau C:parirau D:Kararehe pakau")
   bonus_question5 = input().lower()
   if bonus_question5 == "c" or bonus_question5 == "parirau":
     score += 2
@@ -264,7 +270,7 @@ def bonus_questions():
     print("Incorrect, The answer is parirau")
     print()
   
-  print("Bonus Question #Q6: What is the te reo word for High school: A:te kura tuarua B:rekereke teitei C:pourewa D:mokete")
+  print("Bonus Question #Q6: What is the te reo word for High school: A:te kura tuarua B:rekereke C:pourewa D:mokete")
   bonus_question6 = input().lower()
   if bonus_question6 == "a" or bonus_question6 == "te kura tuarua":
     score += 2
@@ -279,17 +285,14 @@ def bonus_questions():
   if bonus_question7 == "b" or bonus_question7 == "whakapouri":
     score += 2
     print("Correct!")
-    print()
     end()
   else:
-    print("Incorrect, The answer is whakapouri ")
+    print("Incorrect, The answer is whakapouri")
     print()
     end()
         
-
-
 #calls the respo function
 resp_call = respo()
+end()
 
 #QUESTIONS GO HERE!
-

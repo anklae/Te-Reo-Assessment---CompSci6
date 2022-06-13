@@ -14,9 +14,12 @@ def statement_generator(statement, decoration):
     print(top_bottom)
     
     return ""
-statement_generator("Welcome to the Te Reo Maori test!", "%")
+statement_generator("Welcome to the Te Reo Maori test!","%")
 print()
 print("This test has 15 multiple choice questions")
+time.sleep(.5)
+print()
+print("if you get 10 or more of the 15 questions correct you will be granted several bonus questions")
 #This function asks the user if they would like to proceed
 score = 0
 def respo():
@@ -38,17 +41,20 @@ def respo():
 
 def end():
   global score
+  statement_generator("Results", "=")
   statement_generator("You got a score of {} out 29 points".format(score), "*")
   if score <= 5:
     print("you did not do very well, you could do way better")
-  elif score >=5 and score <= 10: 
+  elif score >=5 and score <= 9: 
     print("You did alright, well done")
-  if score >= 10 and score <= 15:
-    print("Good job , you answered more than half of the questions  ")
+  if score >= 10 and score <= 14:
+    print("Good job , you almost answered half of the questions correctly ")
   if score >= 15 and score <= 20:
-    print("Great job,")
+    print("Great job, you got more than half of the questions correct")
   if score >= 25:
-    print("You did amazing!!!!")
+    print("You did amazing!!!! You got almost all the questions correct!!")
+  if score == 29:
+    statement_generator("😱😱😱YOU ABSOLUTELY ACED THE TEST😱😱😱","!")
   if score >= 29:
     print("how have you done this")
 def question_hab():
@@ -57,7 +63,7 @@ def question_hab():
   print("Q1: What is the Te Reo word for Hello?: A:wharepaku B:karekau C:kia ora D:takaro")
   question1 = input().lower()
   if question1 == "c" or question1 == "kia ora":
-    score += 15
+    score += 29
     print("Correct!")
     print()
   else:
@@ -220,7 +226,7 @@ def bonus_questions():
   global score
   print("These bonus questions will give you 2x more points, Make sure to try your best")
   print()
-  print("Bonus #Q1:What is the te reo word for bread: A:taro B:kongakonga taro c:takakau D:Te petipeti")
+  print("Bonus #Q1:What is the te reo word for bread?: A:taro B:kongakonga taro c:takakau D:Te petipeti")
   bonus_question = input().lower()
   if bonus_question == "a" or bonus_question == "taro":
     score += 2
@@ -230,7 +236,7 @@ def bonus_questions():
     print("Incorrect, The answer is taro")
     print()
 
-  print("Bonus #Q2: What is the maori word for Hatchet? A:rangatira B:toki C:paotahi D: patu")
+  print("Bonus #Q2: What is the maori word for Hatchet?: A:rangatira B:toki C:paotahi D: patu")
   bonus_question2 = input().lower()
   if bonus_question2 == "c" or bonus_question2 == "paotahi":
     score += 2
@@ -240,7 +246,7 @@ def bonus_questions():
     print("Incorrect, The answer is paotahi")
     print()
   
-  print("Bonus  #Q3: what is the Te reo word for porcupine: A:porcupine B:poaka C:rotarota D:goorg ")
+  print("Bonus  #Q3: what is the Te reo word for porcupine?: A:porcupine B:poaka C:rotarota D:goorg ")
   bonus_question3 = input().lower()
   if bonus_question3 == "a" or bonus_question3 == "porcupine":
     score += 2
@@ -250,7 +256,7 @@ def bonus_questions():
     print("Incorrect, The answer is porcupine")
     print()
 
-  print("Bonus #Q4: What is the te reo word for plane: A:sanguis B:hanawiti C: whenua D:rererangi ")
+  print("Bonus #Q4: What is the te reo word for plane?: A:sanguis B:hanawiti C: whenua D:rererangi ")
   bonus_question4 = input().lower()
   if bonus_question4 == "d" or bonus_question4 == "rererangi":
     score += 2
@@ -270,7 +276,7 @@ def bonus_questions():
     print("Incorrect, The answer is parirau")
     print()
   
-  print("Bonus Question #Q6: What is the te reo word for High school: A:te kura tuarua B:rekereke C:pourewa D:mokete")
+  print("Bonus Question #Q6: What is the te reo word for High school?: A:te kura tuarua B:rekereke C:pourewa D:mokete")
   bonus_question6 = input().lower()
   if bonus_question6 == "a" or bonus_question6 == "te kura tuarua":
     score += 2
@@ -280,7 +286,7 @@ def bonus_questions():
     print("Incorrect, The answer is te kura tuarua")
     print()
 
-  print("Bonus #Q7: What is the te reo word for berserk: A:puku B:whakapouri c:kaha te hopu D:hake")
+  print("Bonus #Q7: What is the te reo word for berserk?: A:puku B:whakapouri c:kaha te hopu D:hake")
   bonus_question7 = input().lower()
   if bonus_question7 == "b" or bonus_question7 == "whakapouri":
     score += 2
